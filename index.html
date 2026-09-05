@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shiv Stone Company Jaipur Rajasthan - CNC Works, Pilen Pathar, Art Stones, Mandir, Hotels, Farmhouses and Homes.">
+  <title>Shiv Stone Company | Jaipur Rajasthan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+<style>
+
+/* Designer motion additions */
+.magnetic{will-change:transform;transition:transform .22s cubic-bezier(.2,.75,.2,1),box-shadow .3s ease}
+.reveal{opacity:0;transform:translateY(42px);transition:opacity .85s ease,transform .95s cubic-bezier(.2,.72,.2,1)}
+.reveal-left{opacity:0;transform:translateX(-45px);transition:opacity .85s ease,transform .95s cubic-bezier(.2,.72,.2,1)}
+.reveal-right{opacity:0;transform:translateX(45px);transition:opacity .85s ease,transform .95s cubic-bezier(.2,.72,.2,1)}
+.reveal.visible,.reveal-left.visible,.reveal-right.visible{opacity:1;transform:none}
+.stagger > *{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.72,.2,1)}
+.stagger.visible > *{opacity:1;transform:none}
+.stagger.visible > *:nth-child(1){transition-delay:.05s}.stagger.visible > *:nth-child(2){transition-delay:.12s}.stagger.visible > *:nth-child(3){transition-delay:.19s}.stagger.visible > *:nth-child(4){transition-delay:.26s}.stagger.visible > *:nth-child(5){transition-delay:.33s}.stagger.visible > *:nth-child(6){transition-delay:.40s}
+.floating-actions{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:900}
+.float-btn{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.2);will-change:transform}
+.float-btn svg{width:27px;height:27px}.float-btn.call{background:var(--dark)}.float-btn.wa{background:var(--wa)}
+.project-slider-wrap{position:relative;max-width:1000px;margin:auto}
+.project-slider{overflow:hidden;position:relative;background:var(--dark);border-radius:5px}
+.project-track{display:flex;transition:transform .8s cubic-bezier(.77,0,.18,1)}
+.project-slide{min-width:100%;height:570px;position:relative}
+.project-slide img{width:100%;height:100%;object-fit:cover}
+.project-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,15,10,.65),transparent 55%);pointer-events:none}
+.project-label{position:absolute;left:30px;bottom:28px;z-index:2;color:#fff;font-family:'Playfair Display',serif;font-size:26px}
+.project-controls{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.slider-arrows{display:flex;gap:8px}.slider-arrow{width:45px;height:45px;border:1px solid var(--border);background:#fff;color:var(--dark);border-radius:50%;cursor:pointer;font-size:18px;display:grid;place-items:center}
+.project-progress{width:180px;height:2px;background:var(--border)}.project-progress i{display:block;width:10%;height:100%;background:var(--primary);transition:width .5s ease}
+.project-counter{color:var(--muted);font-size:13px}.project-counter strong{color:var(--primary)}
+@media(max-width:600px){.project-slide{height:420px}.project-label{left:20px;bottom:20px;font-size:22px}.project-progress{width:110px}.floating-actions{right:14px;bottom:14px}.float-btn{width:52px;height:52px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head>
+<body>
+<header class="header" id="header">
+  <div class="container nav-wrap">
+    <a href="#home" class="logo"><img src="logo.png" alt="Shiv Stone Company"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      <a class="nav-wa magnetic" href="https://wa.me/917877813838" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero.jpeg" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">JAIPUR • RAJASTHAN</p>
+    <h1>Premium Stone Work,<br><span>Crafted to Last.</span></h1>
+    <p>Hotels, farmhouses, mandirs, homes, CNC works, pilen pathar and custom stone art — all works under one roof.</p>
+    <div class="hero-actions">
+      <a href="#enquiry" class="btn btn-primary magnetic">Send Enquiry</a>
+      <a href="https://wa.me/917877813838" target="_blank" rel="noopener" class="btn btn-light magnetic">WhatsApp Us</a>
+    </div>
+    <div class="hero-phone">Mob. <strong>78778 13838</strong></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container two-col">
+    <div class="image-card reveal-left"><img src="about.jpeg" alt="Shiv Stone Company stone craftsmanship"></div>
+    <div>
+      <p class="eyebrow dark">ABOUT SHIV STONE COMPANY</p>
+      <h2>Stone craftsmanship with a <span>traditional touch.</span></h2>
+      <p>Shiv Stone Company is a Jaipur, Rajasthan based stone-work company delivering quality stone solutions for residential, commercial and religious projects.</p>
+      <p>From detailed CNC designs and pilen pathar to artistic stone work, mandir construction and complete stone work for hotels, farmhouses and homes, we focus on clean finishing and dependable execution.</p>
+      <a href="#contact" class="text-link magnetic">Talk to us →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="services">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow dark">OUR SERVICES</p><h2>Complete stone work solutions</h2><p>Customized workmanship for projects of every scale.</p></div>
+    <div class="cards stagger">
+      <article class="card"><div class="icon">✦</div><h3>CNC Works</h3><p>Precision-cut stone patterns, jaali, panels, borders and customized designs.</p></article>
+      <article class="card"><div class="icon">◆</div><h3>Pilen Pathar</h3><p>Traditional stone detailing and architectural work with refined finishing.</p></article>
+      <article class="card"><div class="icon">✧</div><h3>Stone Art</h3><p>Decorative stone art, carving and statement pieces for unique spaces.</p></article>
+      <article class="card"><div class="icon">⌂</div><h3>Mandir Work</h3><p>Elegant marble and stone mandir work for homes, temples and institutions.</p></article>
+      <article class="card"><div class="icon">▦</div><h3>Home Stone Work</h3><p>Stone cladding, elevation, flooring, features and custom residential work.</p></article>
+      <article class="card"><div class="icon">▥</div><h3>Hotels & Farmhouses</h3><p>Large-scale stone work for hospitality, farmhouse and commercial projects.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container section-head"><p class="eyebrow dark">WHY CHOOSE US</p><h2>Built around quality and detail</h2></div>
+  <div class="container features stagger"><div><b>01</b><h3>Skilled Craftsmanship</h3><p>Experienced hands for traditional and modern stone detailing.</p></div><div><b>02</b><h3>Custom Designs</h3><p>Designs adapted to your space, measurements and requirements.</p></div><div><b>03</b><h3>Project Focus</h3><p>Attention to finishing, timelines and practical site execution.</p></div><div><b>04</b><h3>Direct Enquiry</h3><p>Quick communication through phone and WhatsApp.</p></div></div>
+</section>
+
+<section class="section soft" id="projects">
+  <div class="container section-head reveal">
+    <p class="eyebrow dark">PROJECTS</p><h2>Selected stone work</h2>
+  </div>
+  <div class="container project-slider-wrap reveal">
+    <div class="project-slider">
+      <div class="project-track" id="projectTrack">
+        <div class="project-slide"><img src="p1.jpeg" alt="Shiv Stone Company project 1"><div class="project-label">PROJECT 01</div></div><div class="project-slide"><img src="p2.jpeg" alt="Shiv Stone Company project 2"><div class="project-label">PROJECT 02</div></div><div class="project-slide"><img src="p3.jpeg" alt="Shiv Stone Company project 3"><div class="project-label">PROJECT 03</div></div><div class="project-slide"><img src="p4.jpeg" alt="Shiv Stone Company project 4"><div class="project-label">PROJECT 04</div></div><div class="project-slide"><img src="p5.jpeg" alt="Shiv Stone Company project 5"><div class="project-label">PROJECT 05</div></div><div class="project-slide"><img src="p6.jpeg" alt="Shiv Stone Company project 6"><div class="project-label">PROJECT 06</div></div><div class="project-slide"><img src="p7.jpeg" alt="Shiv Stone Company project 7"><div class="project-label">PROJECT 07</div></div><div class="project-slide"><img src="p8.jpeg" alt="Shiv Stone Company project 8"><div class="project-label">PROJECT 08</div></div><div class="project-slide"><img src="p9.jpeg" alt="Shiv Stone Company project 9"><div class="project-label">PROJECT 09</div></div><div class="project-slide"><img src="p10.jpeg" alt="Shiv Stone Company project 10"><div class="project-label">PROJECT 10</div></div>
+      </div>
+    </div>
+    <div class="project-controls">
+      <div class="slider-arrows">
+        <button class="slider-arrow magnetic" id="prevProject" aria-label="Previous project">←</button>
+        <button class="slider-arrow magnetic" id="nextProject" aria-label="Next project">→</button>
+      </div>
+      <div class="project-progress"><i id="projectProgress"></i></div>
+      <div class="project-counter"><strong id="projectNumber">01</strong> / 10</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container section-head"><p class="eyebrow dark">GALLERY</p><h2>Craftsmanship in detail</h2></div>
+  <div class="container gallery-grid stagger"><img src="g1.jpeg" alt="Stone gallery 1"><img src="g2.jpeg" alt="Stone gallery 2"><img src="g3.jpeg" alt="Stone gallery 3"><img src="g4.jpeg" alt="Stone gallery 4"><img src="g5.jpeg" alt="Stone gallery 5"><img src="g6.jpeg" alt="Stone gallery 6"></div>
+</section>
+
+<section class="section soft" id="reviews">
+  <div class="container section-head"><p class="eyebrow dark">REVIEWS</p><h2>What our clients say</h2><p>Sample testimonials — replace these with verified customer reviews.</p></div>
+  <div class="container review-grid stagger"><article class="review"><div class="stars">★★★★★</div><p>“Excellent stone finishing and very good attention to the design. The team understood our requirements well.”</p><strong>Rajesh Sharma</strong><small>Home Project</small></article><article class="review"><div class="stars">★★★★★</div><p>“Good workmanship for our farmhouse project. Custom stone details came out beautifully.”</p><strong>Amit Singh</strong><small>Farmhouse Project</small></article><article class="review"><div class="stars">★★★★★</div><p>“Professional execution and quality work. Recommended for custom stone and CNC work.”</p><strong>Manoj Verma</strong><small>Commercial Project</small></article></div>
+</section>
+
+<section class="section" id="faq"><div class="container faq-wrap"><div class="section-head reveal"><p class="eyebrow dark">FAQ</p><h2>Frequently asked questions</h2></div><div class="faq-list">
+  <div class="faq-item"><button class="magnetic">What stone work do you provide? <span>+</span></button><div class="faq-answer">We provide CNC works, pilen pathar, stone art, mandir work, home stone work and projects for hotels and farmhouses.</div></div>
+  <div class="faq-item"><button class="magnetic">Do you take hotel and farmhouse projects? <span>+</span></button><div class="faq-answer">Yes. We handle both residential and larger commercial or hospitality stone-work requirements.</div></div>
+  <div class="faq-item"><button class="magnetic">Can CNC designs be customized? <span>+</span></button><div class="faq-answer">Yes. Share your design, reference image, dimensions or requirement and we can discuss customization.</div></div>
+  <div class="faq-item"><button class="magnetic">Do you make custom mandir work? <span>+</span></button><div class="faq-answer">Yes, custom marble and stone mandir work can be planned according to size, style and site requirements.</div></div>
+  <div class="faq-item"><button class="magnetic">How can I get a quotation? <span>+</span></button><div class="faq-answer">Send your project details through the enquiry form or WhatsApp. Include location, work type, measurements and reference images if available.</div></div>
+  <div class="faq-item"><button class="magnetic">How do I contact Shiv Stone Company? <span>+</span></button><div class="faq-answer">Call or WhatsApp us at 78778 13838.</div></div>
+</div></div></section>
+
+<section class="section soft" id="enquiry"><div class="container enquiry-wrap"><div><p class="eyebrow dark">GET A QUOTE</p><h2>Tell us about your project.</h2><p>Fill in the form and your enquiry will open directly in WhatsApp.</p><div class="contact-mini"><strong>Mob. 78778 13838</strong><span>Jaipur, Rajasthan</span></div></div><form id="enquiryForm" class="form reveal-right"><input id="name" type="text" placeholder="Your Name" required><input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="Mobile Number" required><select id="projectType" required><option value="">Select Project Type</option><option>Home</option><option>Hotel</option><option>Farmhouse</option><option>Mandir</option><option>CNC Works</option><option>Pilen Pathar</option><option>Stone Art</option><option>Other</option></select><input id="location" type="text" placeholder="Project Location" required><textarea id="requirement" rows="5" placeholder="Tell us about your requirement" required></textarea><button class="btn btn-primary magnetic" type="submit">Send Enquiry on WhatsApp</button></form></div></section>
+
+<section class="cta"><div class="container cta-inner"><div><p class="eyebrow">READY TO START?</p><h2>Let's create something in stone.</h2></div><a class="btn btn-light magnetic" href="https://wa.me/917877813838" target="_blank" rel="noopener">Chat on WhatsApp</a></div></section>
+</main>
+
+<footer id="contact"><div class="container footer-grid"><div><img class="footer-logo" src="logo.png" alt="Shiv Stone Company"><p>Premium stone work and craftsmanship in Jaipur, Rajasthan.</p></div><div><h4>Quick Links</h4><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a></div><div><h4>Services</h4><a href="#services">CNC Works</a><a href="#services">Pilen Pathar</a><a href="#services">Mandir Work</a><a href="#services">Stone Art</a></div><div><h4>Contact</h4><a href="tel:+917877813838">78778 13838</a><a href="https://wa.me/917877813838" target="_blank" rel="noopener">WhatsApp</a><span>Jaipur, Rajasthan</span></div></div><div class="footer-bottom"><div>© <span id="year"></span> Shiv Stone Company. All Rights Reserved.</div><div>Designed by <strong>Marwar Infotech</strong></div></div></footer>
+<div class="floating-actions">
+<a class="float-btn call magnetic" href="tel:+917877813838" aria-label="Call Shiv Stone Company">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M8.1 4.5c.8-.4 1.8-.1 2.2.7l2.5 4.7c.4.7.2 1.6-.4 2.1l-2 1.7c1.6 3.7 4.3 6.4 8 8l1.7-2c.5-.6 1.4-.8 2.1-.4l4.7 2.5c.8.4 1.1 1.4.7 2.2l-1.2 2.5c-.4.8-1.2 1.3-2.1 1.3C13.1 27.8 4.2 18.9 4.2 8c0-.9.5-1.7 1.3-2.1l2.6-1.4Z"/></svg></a>
+<a class="float-btn wa magnetic" href="https://wa.me/917877813838" target="_blank" rel="noopener" aria-label="WhatsApp Shiv Stone Company">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a12.8 12.8 0 0 0-11 19.4L3.3 29l6.8-1.8A12.9 12.9 0 1 0 16 3Zm0 23.3c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4a10.4 10.4 0 1 1 9.1 4.9Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.7-4.2-3.8-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 .9 4.1.8.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/></svg></a>
+</div>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+if(menuBtn&&nav){
+  menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+  document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+}
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-item button').forEach(btn=>btn.addEventListener('click',()=>{
+  const item=btn.parentElement;
+  document.querySelectorAll('.faq-item').forEach(x=>{if(x!==item)x.classList.remove('active')});
+  item.classList.toggle('active');
+}));
+
+/* Mobile number */
+const mobile=document.getElementById('mobile');
+if(mobile) mobile.addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,10));
+
+/* WhatsApp enquiry */
+const enquiry=document.getElementById('enquiryForm');
+if(enquiry) enquiry.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('mobile').value.trim();
+  const projectType=document.getElementById('projectType').value;
+  const location=document.getElementById('location').value.trim();
+  const requirement=document.getElementById('requirement').value.trim();
+  if(phone.length!==10){alert('Please enter a valid 10-digit mobile number.');return;}
+  const message=`Hello Shiv Stone Company,
+
+I am interested in your stone work.
+
+Name: ${name}
+Mobile: ${phone}
+Project Type: ${projectType}
+Project Location: ${location}
+
+Requirement:
+${requirement}
+
+Thank you.`;
+  window.open(`https://wa.me/917877813838?text=${encodeURIComponent(message)}`,'_blank');
+});
+
+/* Header */
+window.addEventListener('scroll',()=>{
+  const header=document.getElementById('header');
+  if(header) header.classList.toggle('scrolled',window.scrollY>20);
+});
+
+/* Scroll reveal */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.12,rootMargin:'0px 0px -45px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(el=>revealObserver.observe(el));
+
+/* Magnetic effect */
+if(window.matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.magnetic').forEach(el=>{
+    el.addEventListener('mousemove',e=>{
+      const r=el.getBoundingClientRect();
+      el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.12}px)`;
+    });
+    el.addEventListener('mouseleave',()=>el.style.transform='');
+  });
+}
+
+/* Projects: 10 images, one image per slide */
+const projectTrack=document.getElementById('projectTrack');
+const projectSlides=document.querySelectorAll('.project-slide');
+const projectNumber=document.getElementById('projectNumber');
+const projectProgress=document.getElementById('projectProgress');
+let projectIndex=0,projectTimer;
+
+function showProject(n){
+  projectIndex=(n+projectSlides.length)%projectSlides.length;
+  projectTrack.style.transform=`translateX(-${projectIndex*100}%)`;
+  projectNumber.textContent=String(projectIndex+1).padStart(2,'0');
+  projectProgress.style.width=`${((projectIndex+1)/projectSlides.length)*100}%`;
+}
+function restartProjectAuto(){
+  clearInterval(projectTimer);
+  projectTimer=setInterval(()=>showProject(projectIndex+1),5000);
+}
+document.getElementById('prevProject').addEventListener('click',()=>{showProject(projectIndex-1);restartProjectAuto()});
+document.getElementById('nextProject').addEventListener('click',()=>{showProject(projectIndex+1);restartProjectAuto()});
+showProject(0);restartProjectAuto();
+
+const slider=document.querySelector('.project-slider');
+if(slider){
+  slider.addEventListener('mouseenter',()=>clearInterval(projectTimer));
+  slider.addEventListener('mouseleave',restartProjectAuto);
+}
+
+const year=document.getElementById('year');
+if(year) year.textContent=new Date().getFullYear();
+</script></body>
+</html>
