@@ -467,8 +467,14 @@ h2 span{
 
 
 /* =========================================================
-   PROJECTS SLIDER
+   PROJECTS / SELECTED STONE WORK — 4 CATEGORY SLIDERS
 ========================================================= */
+
+.stone-work-list{
+  display:flex;
+  flex-direction:column;
+  gap:110px;
+}
 
 .stone-work-slider{
   display:grid;
@@ -477,44 +483,113 @@ h2 span{
   align-items:center;
 }
 
-.stone-work-info{padding-right:10px}
-.stone-work-copy{max-width:430px;min-height:255px}
+.stone-work-info{
+  padding-right:10px;
+}
+
+.stone-work-copy{
+  max-width:430px;
+  min-height:255px;
+}
+
 .stone-work-number{
-  display:block;color:var(--primary);font-size:12px;font-weight:700;
-  letter-spacing:2px;margin-bottom:18px;
+  display:block;
+  color:var(--primary);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:18px;
 }
+
 .stone-work-copy h3{
-  font-family:'Playfair Display',serif;color:var(--dark);
-  font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 18px;
+  font-family:'Playfair Display',serif;
+  color:var(--dark);
+  font-size:clamp(30px,3.2vw,44px);
+  line-height:1.15;
+  margin:0 0 18px;
 }
-.stone-work-copy p{font-size:16px;line-height:1.8;margin:0;color:var(--text)}
-.stone-work-controls{display:flex;gap:10px;margin-top:28px}
+
+.stone-work-copy p{
+  font-size:16px;
+  line-height:1.8;
+  margin:0;
+  color:var(--text);
+}
+
+.stone-work-controls{
+  display:flex;
+  gap:10px;
+  margin-top:28px;
+}
 
 .project-slider{
-  position:relative;width:100%;height:440px;overflow:hidden;border-radius:6px;
-  background:#28231e;box-shadow:0 18px 45px rgba(40,35,30,.12);
+  position:relative;
+  width:100%;
+  height:440px;
+  overflow:hidden;
+  border-radius:6px;
+  background:#28231e;
+  box-shadow:0 18px 45px rgba(40,35,30,.12);
 }
+
 .project-track{
-  display:flex;width:100%;height:100%;
+  display:flex;
+  width:100%;
+  height:100%;
   transition:transform .75s cubic-bezier(.77,0,.18,1);
 }
-.project-slide{min-width:100%;height:100%;position:relative;overflow:hidden}
+
+.project-slide{
+  min-width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
 .project-slide img{
-  width:100%;height:100%;object-fit:cover;object-position:center;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
   transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
 }
-.project-slide.active img{animation:projectImageIn 1s ease both}
+
+.project-slide.active img{
+  animation:projectImageIn 1s ease both;
+}
+
 @keyframes projectImageIn{
   from{transform:scale(1.06);opacity:.65}
   to{transform:scale(1);opacity:1}
 }
+
 .project-arrow{
-  position:relative;width:48px;height:48px;border-radius:50%;
-  border:1px solid var(--border);background:#fff;color:var(--dark);
-  display:grid;place-items:center;font-size:20px;cursor:pointer;z-index:5;
+  position:relative;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--dark);
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  cursor:pointer;
+  z-index:5;
   transition:.3s ease;
 }
-.project-arrow:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+.project-arrow:hover{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+@media(max-width:900px){
+  .stone-work-list{
+    gap:85px;
+  }
+}
 
 
 /* =========================================================
@@ -942,6 +1017,10 @@ h2 span{
     gap:35px;
   }
 
+  .stone-work-list{
+    gap:80px;
+  }
+
   .stone-work-info{
     padding-right:0;
   }
@@ -1360,7 +1439,7 @@ h2 span{
 
 
 <!-- =====================================================
-     SELECTED STONE WORK — s1.jpeg TO s20.jpeg
+     SELECTED STONE WORK — 4 COLLECTIONS
 ===================================================== -->
 
 <section class="section soft" id="projects">
@@ -1372,35 +1451,19 @@ h2 span{
     </p>
 
     <h2>
-      Selected stone work
+      Selected Stone Craftsmanship
     </h2>
+
+    <p>
+      Explore our signature stone collections, presented through
+      four dedicated manual sliders.
+    </p>
 
   </div>
 
-
-  <div class="container stone-work-slider reveal scale-in">
-
-    <div class="stone-work-info">
-      <p class="eyebrow dark">STONE ART COLLECTION</p>
-      <div class="stone-work-copy">
-        <span class="stone-work-number" id="projectNumber">01 / 20</span>
-        <h3 id="projectTitle">Handcrafted Stone Elegance</h3>
-        <p id="projectTagline">Detailed stone artistry created to bring character, depth and timeless beauty to every space.</p>
-      </div>
-
-      <div class="stone-work-controls">
-        <button class="project-arrow left magnetic" id="projectPrev" aria-label="Previous project">←</button>
-        <button class="project-arrow right magnetic" id="projectNext" aria-label="Next project">→</button>
-      </div>
-    </div>
-
-    <div class="project-slider">
-      <div class="project-track" id="projectTrack">
-        <!-- JS inserts s1.jpeg - s20.jpeg -->
-      </div>
-    </div>
-
-  </div>>
+  <div class="container stone-work-list" id="stoneWorkList">
+    <!-- JS builds the four category sliders here. -->
+  </div>
 
 </section>
 
@@ -2059,107 +2122,123 @@ document.getElementById('year')
 
 
 /* =========================================================
-   SELECTED STONE WORK SLIDER
-   s1.jpeg → s20.jpeg
+   SELECTED STONE WORK — 4 CATEGORY SLIDERS
+   Manual navigation only — no autoplay.
 ========================================================= */
 
-const projectTrack =
-  document.getElementById('projectTrack');
+const stoneWorkList = document.getElementById('stoneWorkList');
 
-const projectImages =
-  Array.from({length:20},(_,i)=>`s${i+1}.jpeg`);
-
-const projectTitles = [
-  'Handcrafted Stone Elegance','Architectural Stone Detailing',
-  'Carved Stone Statement','Timeless Stone Craft',
-  'Fine Stone Surface Art','Traditional Stone Expression',
-  'Elegant Stone Feature','Custom Stone Craftsmanship',
-  'Detailed Architectural Art','Heritage Stone Work',
-  'Sculpted Stone Character','Premium Stone Detailing',
-  'Artistry in Natural Stone','Refined Stone Architecture',
-  'Signature Stone Design','Classic Stone Craft',
-  'Contemporary Stone Art','Hand-Finished Stone Work',
-  'Distinctive Stone Expression','Mastercrafted Stone Finish'
-];
-
-const projectTaglines = [
-  'Detailed stone artistry created to bring character, depth and timeless beauty to every space.',
-  'Precision detailing that adds architectural identity and refined visual depth.',
-  'Statement stone craftsmanship designed to become the focal point of a distinguished space.',
-  'A timeless blend of traditional workmanship and elegant stone detailing.',
-  'Fine surface artistry with carefully finished details for a premium architectural feel.',
-  'Traditional stone expression shaped with patience, precision and an eye for detail.',
-  'A refined stone feature crafted to add warmth, texture and lasting character.',
-  'Custom stone craftsmanship developed around the vision, measurements and style of your space.',
-  'Architectural stone art where intricate detailing meets dependable craftsmanship.',
-  'Heritage-inspired stone work created with an appreciation for classic Indian craftsmanship.',
-  'Sculpted stone detailing that gives walls, entrances and features a distinctive identity.',
-  'Premium stone workmanship focused on clean lines, balanced detailing and refined finishing.',
-  'Natural stone transformed into expressive architectural art with a handcrafted character.',
-  'Refined stone architecture that complements both traditional and contemporary spaces.',
-  'A signature stone design made to create a memorable visual statement.',
-  'Classic craftsmanship brought to life through carefully detailed stone work.',
-  'Contemporary stone art combining clean aesthetics with the richness of natural material.',
-  'Hand-finished details that highlight the texture, depth and beauty of stone.',
-  'Distinctive stone expression created for spaces that deserve a unique identity.',
-  'Mastercrafted finishing that brings together detail, durability and timeless stone beauty.'
-];
-
-let projectIndex = 0;
-
-projectImages.forEach((src,index)=>{
-  const slide = document.createElement('div');
-  slide.className = 'project-slide';
-  if(index === 0) slide.classList.add('active');
-  slide.innerHTML = `
-    <img src="${src}" alt="Shiv Stone Company selected stone work ${index+1}"
-         loading="${index===0?'eager':'lazy'}">
-  `;
-  projectTrack.appendChild(slide);
-});
-
-const projectSlides = document.querySelectorAll('.project-slide');
-const projectNumber = document.getElementById('projectNumber');
-const projectTitle = document.getElementById('projectTitle');
-const projectTagline = document.getElementById('projectTagline');
-
-function showProject(number){
-  projectIndex = (number + projectImages.length) % projectImages.length;
-
-  projectTrack.style.transform =
-    `translateX(-${projectIndex * 100}%)`;
-
-  projectSlides.forEach((slide,index)=>{
-    slide.classList.toggle('active',index === projectIndex);
-  });
-
-  projectNumber.textContent =
-    `${String(projectIndex+1).padStart(2,'0')} / 20`;
-  projectTitle.textContent = projectTitles[projectIndex];
-  projectTagline.textContent = projectTaglines[projectIndex];
-}
-
-document.getElementById('projectPrev')
-  .addEventListener('click',()=>showProject(projectIndex-1));
-
-document.getElementById('projectNext')
-  .addEventListener('click',()=>showProject(projectIndex+1));
-
-let touchStartX = 0;
-
-projectTrack.addEventListener('touchstart',e=>{
-  touchStartX = e.touches[0].clientX;
-},{passive:true});
-
-projectTrack.addEventListener('touchend',e=>{
-  const touchEndX = e.changedTouches[0].clientX;
-  const distance = touchStartX - touchEndX;
-
-  if(Math.abs(distance) > 50){
-    if(distance > 0) showProject(projectIndex+1);
-    else showProject(projectIndex-1);
+const stoneWorkCategories = [
+  {
+    name: 'Temple Stonecraft',
+    label: 'MANDIR COLLECTION',
+    tagline: 'Sacred stone craftsmanship shaped with precision, devotion and timeless architectural detail.',
+    prefix: 'm',
+    count: 12,
+    alt: 'Shiv Stone Company temple stonework'
+  },
+  {
+    name: 'Heritage Chhatri Craft',
+    label: 'CHHATRI COLLECTION',
+    tagline: 'Heritage-inspired stone structures crafted to bring elegance, symmetry and royal character to every setting.',
+    prefix: 'c',
+    count: 15,
+    alt: 'Shiv Stone Company heritage chhatri stonework'
+  },
+  {
+    name: 'Architectural Jaali Art',
+    label: 'JAALI COLLECTION',
+    tagline: 'Intricate stone jaali work designed to add light, pattern, privacy and refined architectural beauty.',
+    prefix: 'j',
+    count: 15,
+    alt: 'Shiv Stone Company architectural jaali stonework'
+  },
+  {
+    name: 'Sculpted 3D Wall Panels',
+    label: '3D WALL PANEL COLLECTION',
+    tagline: 'Dimensional stone artistry that transforms walls into striking statements of texture, depth and character.',
+    prefix: 'w',
+    count: 30,
+    alt: 'Shiv Stone Company 3D stone wall panels'
   }
-},{passive:true});
+];
+
+stoneWorkCategories.forEach((category, categoryIndex)=>{
+  const images = Array.from(
+    {length:category.count},
+    (_,i)=>`${category.prefix}${i+1}.jpeg`
+  );
+
+  const row = document.createElement('div');
+  row.className = 'stone-work-slider reveal scale-in';
+  row.innerHTML = `
+    <div class="stone-work-info">
+      <p class="eyebrow dark">${category.label}</p>
+      <div class="stone-work-copy">
+        <span class="stone-work-number">01 / ${String(category.count).padStart(2,'0')}</span>
+        <h3>${category.name}</h3>
+        <p>${category.tagline}</p>
+      </div>
+
+      <div class="stone-work-controls">
+        <button class="project-arrow left magnetic" type="button" aria-label="Previous ${category.name}">←</button>
+        <button class="project-arrow right magnetic" type="button" aria-label="Next ${category.name}">→</button>
+      </div>
+    </div>
+
+    <div class="project-slider">
+      <div class="project-track">
+        ${images.map((src,index)=>`
+          <div class="project-slide${index===0?' active':''}">
+            <img src="${src}" alt="${category.alt} ${index+1}" loading="${index===0?'eager':'lazy'}">
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  stoneWorkList.appendChild(row);
+
+  const track = row.querySelector('.project-track');
+  const slides = row.querySelectorAll('.project-slide');
+  const number = row.querySelector('.stone-work-number');
+  const prev = row.querySelector('.project-arrow.left');
+  const next = row.querySelector('.project-arrow.right');
+
+  let index = 0;
+
+  const showSlide = (nextIndex)=>{
+    index = (nextIndex + images.length) % images.length;
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    slides.forEach((slide,slideIndex)=>{
+      slide.classList.toggle('active',slideIndex === index);
+    });
+
+    number.textContent =
+      `${String(index+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
+  };
+
+  prev.addEventListener('click',()=>showSlide(index-1));
+  next.addEventListener('click',()=>showSlide(index+1));
+
+  let touchStartX = 0;
+
+  track.addEventListener('touchstart',e=>{
+    touchStartX = e.touches[0].clientX;
+  },{passive:true});
+
+  track.addEventListener('touchend',e=>{
+    const touchEndX = e.changedTouches[0].clientX;
+    const distance = touchStartX - touchEndX;
+
+    if(Math.abs(distance) > 50){
+      if(distance > 0) showSlide(index+1);
+      else showSlide(index-1);
+    }
+  },{passive:true});
+});
 
 
 /* =========================================================
